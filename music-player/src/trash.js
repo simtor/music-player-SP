@@ -89,3 +89,19 @@
 // }
 
 // export default App;
+
+//////////////////////
+// let amountSongs  = props.songs.length;
+        // let numberSong = 0;
+        // while(0 < amountSongs){
+        //     // console.log(array.next(numberSong).value);
+        //     numberSong++;
+
+        // }
+        // console.log(array.next(numberSong).value);
+        // console.log(amountSongs)
+        // console.log(array[0].title);
+                // console.log(array.next().value);
+        // console.log(array.next().value);
+        // console.log(array.next().value);
+        // console.log(array.next().value);

@@ -24,7 +24,7 @@ function App() {
     },
     {
       title: "Just For Now",
-      artist: "Imogen Heap - Just For Now",
+      artist: "Imogen Heap",
       img_src: "./images/song-4.jpg",
       src: "./music/Imogen Heap - Just For Now.mp3"
     }

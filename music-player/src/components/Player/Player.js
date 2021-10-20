@@ -5,6 +5,7 @@ import Details from './Details';
 function Player(props) {
     const audioEl = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
+    const allsongs = [];
 
     useEffect(() => {
         if (isPlaying) {
@@ -13,6 +14,17 @@ function Player(props) {
             audioEl.current.pause();
         }
     });
+
+    let array = props.songs;
+    array.map((song)=>{
+        allsongs.push(
+        <div>
+            <p>{song.title}</p>
+            <p>{song.artist}</p>
+            </div>)
+        console.log(song.title)
+    })
+
 
     const SkipSong = (forwards = true) => {
         if (forwards) {
@@ -42,6 +54,8 @@ function Player(props) {
 
     return (
         <div className="c-player">
+            <h1 classname='title'>Rebmen Music Palyer</h1>
+            <input type="text" placeholder="Search.."></input>
             <audio src={props.songs[props.currentSongIndex].src} ref={audioEl}></audio>
             <h4>Playing now</h4>
             <Details song={props.songs[props.currentSongIndex]} />
@@ -49,6 +63,9 @@ function Player(props) {
             <audio ref="audio_tag" src="./music/Imogen Heap - Just For Now.mp3" src={props.songs[props.currentSongIndex].src}
                 ref={audioEl} controls autoPlay/>
             <p>Next up: <span>{props.songs[props.nextSongIndex].title} by {props.songs[props.nextSongIndex].artist}</span></p>
+            {/* <button onClick={displayMusic}> Songs tracks or albums</button> */}
+            <p>Songs:</p>
+            <ul>{allsongs}</ul>
         </div>
     )
 }
