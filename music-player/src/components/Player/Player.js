@@ -26,7 +26,6 @@ function Player(props) {
         <div class="nameSong">
             <div className ='circle-image'>
             <img src={song.img_src} alt="" />
-            {/* <button><img src={song.img_src} alt="" onClick={console.log("clicked")} /></button> */}
             </div>
             <div className ="text-song">
                 <p>{song.title}</p>
@@ -43,8 +42,6 @@ function Player(props) {
                 console.log(temp)
                 return temp;
             });
-        // console.log(props.songs[indexShuffle])
-        // console.log(indexShuffle)
     }
 
     const SkipSong = (forwards = true) => {
