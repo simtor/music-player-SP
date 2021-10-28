@@ -124,12 +124,12 @@ function Player(props) {
             <h4>Playing now</h4>
             <Details song={props.songs[props.currentSongIndex]} />
             <Controls isPlaying={isPlaying} setIsPlaying={setIsPlaying} SkipSong={SkipSong} />
-            <audio ref="audio_tag" src="./music/Imogen Heap - Just For Now.mp3" src={props.songs[props.currentSongIndex].src}
-                ref={audioEl} id="au" controls autoPlay/>
-            <button onClick={ShuffleSong}>
+            <button className="shuffleButton" onClick={ShuffleSong}>
                 Shuffle
                 <FontAwesomeIcon icon={faRandom}></FontAwesomeIcon>
             </button>
+            <audio ref="audio_tag" src="./music/Imogen Heap - Just For Now.mp3" src={props.songs[props.currentSongIndex].src}
+                ref={audioEl} id="au" controls autoPlay/>
             {/* <button onClick={nextTrack}>
                 songs
             </button> */}

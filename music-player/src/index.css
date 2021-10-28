@@ -142,15 +142,6 @@ title{
       height: 50px;
       display: grid;
       grid-template-columns: 50px 1fr;
-    /* color:white;
-    position:relative;
-    top:-500px;
-    left:500px;
-    padding: 10x;
-    float:right;
-    background-color: rgb(72, 161, 106); */
-    /* width: 300px; */
-    /* text-align:right; */
 }
 
 ul {
@@ -185,9 +176,18 @@ ul {
 audio {
     color: teal;
 }
-/* .ShuffleButton{
-    background-image: url("shuffle.png");
-} */
+.shuffleButton{
+    display: flex;
+    margin: 0 100px;
+    padding: 20px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: #2a993d;
+    color: #FFF;
+    font-size: 24px;
+
+}
 .searchMenu{
     color: teal;
 
