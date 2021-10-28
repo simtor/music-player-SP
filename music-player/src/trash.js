@@ -105,3 +105,56 @@
         // console.log(array.next().value);
         // console.log(array.next().value);
         // console.log(array.next().value);
+
+
+        // .searchBar{
+        //         width: 100%;
+        //         text-align:center;
+            
+        //     }
+        //     .nameSong{
+        //           position:relative;
+        //           height: 50px;
+        //           display: grid;
+        //           top:-300px;
+        //           left:300px;
+        //           grid-template-columns: 50px 1fr;
+        //         /* color:white;
+        //         position:relative;
+        //         top:-500px;
+        //         left:500px;
+        //         padding: 10x;
+        //         float:right;
+        //         background-color: rgb(72, 161, 106); */
+        //         /* width: 300px; */
+        //         /* text-align:right; */
+        //     }
+            
+        //     ul {
+        //       color: #EEE;
+        //     }
+            
+            
+        //     .circle-image{
+        //         display: flex;
+        //         border-radius: 50%;
+        //         overflow: hidden;
+        //         width: 50px;
+        //         height: 50px;
+        //         /* float:left; */
+        //       }
+        //       .circle-image img{
+        //         width:100%;
+        //         height:100%;
+        //         object-fit: cover;
+        //       }
+            
+        //     .text-song{
+        //         color: white;
+            
+        //     }
+            
+        //     .songslists{
+        //         display: flex;
+        //         flex-direction: column;
+        //     }

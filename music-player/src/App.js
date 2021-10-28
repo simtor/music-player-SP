@@ -5,7 +5,7 @@ import Player from './components/Player/Player';
 function App() {
   const [songs] = useState([
     {
-      title: "Life Of The Party (feat. Andre 3000)",
+      title: "Life Of The Party",
       artist: "Kanye West",
       img_src: "./images/song-1.jpg",
       src: "./music/Kanye West - Life Of The Party (feat. Andre 3000).mp3"
