@@ -13,7 +13,6 @@ function Player(props) {
     useEffect(() => {
         if (isPlaying) {
             audioEl.current.play();
-            console.log("moving to next track");
             nextTrack();
         } else {
             audioEl.current.pause();
@@ -32,14 +31,13 @@ function Player(props) {
                 <p>{song.artist}</p>
             </div>
         </div>)
-        console.log(song.title)
+        // console.log("Created by Simone")
     })
 
     const ShuffleSong =() =>{
         props.setCurrentSongIndex(() => {
                 let temp = props.currentSongIndex;
                 temp = Math.floor(Math.random() * props.songs.length);
-                console.log(temp)
                 return temp;
             });
     }
@@ -67,11 +65,9 @@ function Player(props) {
     }
 
     function nextTrack(){
-        console.log("Running....")
         let c=0;
         let a=document.getElementById("au");
             a.addEventListener('ended', function(){
-                console.log("Song ended")
                 props.setCurrentSongIndex(() => {
                     let temp = props.currentSongIndex;
                     temp++;
@@ -79,14 +75,8 @@ function Player(props) {
                         temp = 0;
                     }
                     return temp;
-                    // let temp = props.currentSongIndex;
-                    // temp = Math.floor(Math.random() * props.songs.length);
-                    // console.log(temp)
-                    // return temp;
                 });
-            // document.getElementById("au").src=props.songs[1];
             a.load();
-            console.log(c);
             c++;
             if(c>=props.songs.length){
                 c=0;
@@ -100,12 +90,9 @@ function Player(props) {
             <div>
             <input className='searchBar' type="text" placeholder="Search.." onChange={event =>{setSearchTerm(event.target.value)}}></input>{
                 array.filter((song) =>{
-                    console.log("searchTerm, " + searchTerm)
                     if(searchTerm == ""){
-                        console.log("Got here 1");
                         return "";
                     }else if(song.title.toLowerCase().includes(searchTerm.toLowerCase())){
-                        console.log("Got here")
                         return song.title;
                     } 
                 }).map((song)=>{
@@ -117,7 +104,6 @@ function Player(props) {
                     </div>
                 })}
             </div>
-            {/* <audio src={props.songs[props.currentSongIndex].src} ref={audioEl}></audio> */}
             <h4>Playing now</h4>
             <Details song={props.songs[props.currentSongIndex]} />
             <Controls isPlaying={isPlaying} setIsPlaying={setIsPlaying} SkipSong={SkipSong} />
@@ -127,14 +113,9 @@ function Player(props) {
             </button>
             <audio ref="audio_tag" src="./music/Imogen Heap - Just For Now.mp3" src={props.songs[props.currentSongIndex].src}
                 ref={audioEl} id="au" controls autoPlay/>
-            {/* <button onClick={nextTrack}>
-                songs
-            </button> */}
             <p>Next up: <span>{props.songs[props.nextSongIndex].title} by {props.songs[props.nextSongIndex].artist}</span></p>
-            {/* <button onClick={displayMusic}> Songs tracks or albums</button> */}
             <div className='nameSong'>
             <p>Songs:</p>
-            {/* <ul>{allsongs}</ul> */}
             <div class="songslists">{allsongs}</div>
             </div>
         </div>
