@@ -86,7 +86,7 @@ function Player(props) {
 
     return (
         <div className="c-player">
-            <h1 classname='title'>Rebmen Music Palyer</h1>
+            <h1 classname='title'>Rebmem Music Palyer</h1>
             <div>
             <input className='searchBar' type="text" placeholder="Search.." onChange={event =>{setSearchTerm(event.target.value)}}></input>{
                 array.filter((song) =>{
